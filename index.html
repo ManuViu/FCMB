@@ -1,80 +1,66 @@
-OCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Stream Futbol Live</title>
+    <title>LIVE FUTBOL</title>
     <style>
-        /* Reset básico */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0d0d0d;
+            font-family: Arial, sans-serif;
+            background-color: #111;
             color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            background: #6441a5;
-            width: 100%;
-            padding: 20px 0;
             text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
+            margin: 0;
+            padding: 0;
         }
-
-        .status {
-            margin: 15px 0;
-            font-size: 1.2rem;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
+        h1 {
+            padding: 20px;
+            background-color: #6441a5;
+            margin: 0;
         }
-
-        .live { background-color: #e91916; color: #fff; }
-        .offline { background-color: #555; color: #ccc; }
-
         .container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
             padding: 20px;
-            width: 90%;
-            max-width: 1300px;
         }
-
         .video {
             flex: 1;
             min-width: 600px;
         }
-
         .chat {
             flex: 0 0 350px;
             min-width: 300px;
+            margin-left: 20px;
         }
-
         iframe {
             border: none;
-            border-radius: 10px;
         }
+    </style>
+</head>
+<body>
 
-        @media (max-width: 1000px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .chat { margin-left: 0; }
-        }
+<h1>LIVE FUTBOL</h1>
 
-        footer {
-            margin-top: auto;
-            padding: 15px;
-            font-size: 0.9rem;
-            color: #aaa;
+<div class="container">
+    <!-- Stream de Twitch -->
+    <div class="video">
+        <iframe
+            src="https://player.twitch.tv/?channel=futbolliveonlinee&parent=TU_DOMINIO"
+            height="500"
+            width="900"
+            allowfullscreen>
+        </iframe>
+    </div>
 
+    <!-- Chat de Twitch -->
+    <div class="chat">
+        <iframe
+            src="https://www.twitch.tv/embed/futbolliveonlinee/chat?parent=https://manuviu.github.io/StreamFutbol/"
+            height="500"
+            width="350">
+        </iframe>
+    </div>
+</div>
 
-
+</body>
+</html>
